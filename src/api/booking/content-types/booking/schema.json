@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookings",
+  "info": {
+    "singularName": "booking",
+    "pluralName": "bookings",
+    "displayName": "Booking"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "chat_id": {
+      "type": "uid",
+      "required": true
+    },
+    "telegram_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::telegram-user.telegram-user",
+      "inversedBy": "bookings"
+    },
+    "master": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::master.master"
+    },
+    "service": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::service.service"
+    },
+    "datetime": {
+      "type": "datetime",
+      "required": true
+    }
+  }
+}
