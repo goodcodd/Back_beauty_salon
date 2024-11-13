@@ -16,10 +16,6 @@
       "type": "string",
       "required": true
     },
-    "telegram_id": {
-      "type": "uid",
-      "required": true
-    },
     "username": {
       "type": "string",
       "required": true
@@ -29,6 +25,11 @@
       "relation": "oneToMany",
       "target": "api::booking.booking",
       "mappedBy": "telegram_user"
+    },
+    "telegram_id": {
+      "type": "biginteger",
+      "required": true,
+      "unique": true
     }
   }
 }
