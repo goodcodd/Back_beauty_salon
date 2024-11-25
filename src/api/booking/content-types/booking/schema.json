@@ -38,6 +38,10 @@
       "unique": false,
       "required": true,
       "pluginOptions": {}
+    },
+    "is_notified": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
